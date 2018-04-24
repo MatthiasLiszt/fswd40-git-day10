@@ -35,12 +35,20 @@ function fizzBuzz(n){
  return output;
 }
 
-var dataArray=[];
+var dataArray=[];A
 
 function arrayItemsAdd(id){
  var v=document.getElementById(id).value;
  dataArray.push(v);
  console.log(v);
+}
+
+function arrayItemsDisplay(id){
+ var o=document.getElementById(id);
+ var output=[];
+ var i=0;
+ dataArray.map(x => {output.push("<p>Element "+i+" = "+dataArray[i]+"</p>");++i;}); 
+ o.innerHTML=output.join('');
 }
 
 
