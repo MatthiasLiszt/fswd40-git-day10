@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript Day 3</title>
+
+	
+	
+</head>
+<body>
+
+<h1>Basic Exercise 1 | Temperature</h1>
+
+
+	<p>Click the button to display today's weather.</p>
+
+<button onclick="temperature()">Try it</button>
+
+<p id="demo"></p>
+
+
+<p id="demo2"> </p>
+
+
+<h1>Basic Exercise 2 | Highest value in an array</h1>
+
+
+
+  Give in your numbers: 
+  <br></br>
+  Number 1: 
+  <textarea id="no1" ></textarea>
+  <br> </br>Number 2
+  <textarea id="no2" ></textarea>
+   <br> </br>Number 3
+  <textarea id="no3" ></textarea>
+   <br> </br>
+   Number 4
+   <textarea id="no4" ></textarea>
+   <br></br>
+   <button onclick = "highestnumber()">submit</button> 
+   
+
+<br></br>
+
+<p>This is the highest value: </p>
+
+<div id="demo3"></div>
+
+
+	<script>
+	function temperature() {
+    var x = Math.floor((Math.random() * 25) - 5);
+    document.getElementById("demo").innerHTML = x;
+
+
+     if (x >= -5 && x <=10) {
+		   document.getElementById("demo2").innerHTML = "The weather is cold";
+		} else {
+		   document.getElementById("demo2").innerHTML = "The weather is moderate";
+		}
+
+	}
+
+
+
+    var maxValue=0;
+
+
+	function highestnumber () {
+		var numbers=[];
+		numbers.push(parseInt(document.getElementById("no1").value,10));
+	    numbers.push(parseInt(document.getElementById("no2").value,10));
+	    numbers.push(parseInt(document.getElementById("no3").value,10));
+	    numbers.push(parseInt(document.getElementById("no4").value,10));
+	    maxValue=Math.max(numbers[0],numbers[1], numbers[2], numbers[3]);
+	    document.getElementById("demo3").innerHTML = "highestNumber "+maxValue;	
+		//document.write(maxValue);
+		console.log("maxValue "+maxValue);
+	}
+	
+	function printHighestNumber(){
+	 document.getElementById("demo3").innerHTML = "highestNumber "+maxValue;	
+	}
+
+</script>
+
+
+
+
+
+	
+</body>
+</html>
