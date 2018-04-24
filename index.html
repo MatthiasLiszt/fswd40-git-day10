@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript Day 3</title>
+
+	<script>
+	function temperature() {
+    var x = Math.floor((Math.random() * 25) - 5);
+    document.getElementById("demo").innerHTML = x;
+
+
+     if (x >= -5 && x <=10) {
+		   document.getElementById("demo2").innerHTML = "The weather is cold";
+		} else {
+		   document.getElementById("demo2").innerHTML = "The weather is moderate";
+		}
+
+	}
+
+
+
+ 
+
+
+	function highestnumber () {
+		var numbers = [];
+		numbers.push(document.getElementById("no1").value);
+	    numbers.push(document.getElementById("no2").value);
+	    numbers.push(document.getElementById("no3").value);
+	     numbers.push(document.getElementById("no4").value);
+		// document.getElementById("demo3").innerHTML = "highestNumber "+Math.max(numbers[0],numbers[1], numbers[2], numbers[3]);
+		document.getElementById("demo3").innerHTML = "wwwww";
+	}
+	
+
+</script>
+	
+</head>
+<body>
+
+<h1>Basic Exercise 1 | Temperature</h1>
+
+
+	<p>Click the button to display today's weather.</p>
+
+<button onclick="temperature()">Try it</button>
+
+<p id="demo"></p>
+
+
+<p id="demo2"> </p>
+
+
+<h1>Basic Exercise 2 | Highest value in an array</h1>
+
+
+<form>
+  Give in your numbers: <br>
+  Number 1: 
+  <input type="number" id="no1" >
+  <br> Number 2 
+  <input type="number" id="no2" >
+   <br> Number 3
+  <input type="number" id="no3" >
+   <br> Number 4
+  <input type="number" id="no4">
+   <br> 
+   <input type="submit" onclick = "highestnumber()" value="Höchste Zahl">
+</form>
+
+<br>
+
+<p>This is the highest value: </p>
+
+<p id="demo3"></p>
+
+
+
+
+
+
+
+
+	
+</body>
+</html>
